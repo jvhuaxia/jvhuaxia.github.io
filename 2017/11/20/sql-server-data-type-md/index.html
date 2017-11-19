@@ -5,17 +5,17 @@
   
   <title>菊花侠的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="====文本数据类型==== char 固定长度的非Unicode字符 varchar 可变长度的非Unicode字符 nchar 固定长度的Unicode支付 nvarchar 可变长度的Unicode支付 text 储存长文本信息 ntext 储存可变长度的文本信息====日期和时间==== datetime 储存时间和日期====数字数据====整数 int smallint tinyint">
+  <meta name="description" content="文本数据类型 char 固定长度的非Unicode字符 varchar 可变长度的非Unicode字符 nchar 固定长度的Unicode支付 nvarchar 可变长度的Unicode支付 text 储存长文本信息 ntext 储存可变长度的文本信息日期和时间 datetime 储存时间和日期数字数据整数 int smallint tinyint bigint小数 可以储存小数，并且可以指定数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="菊花侠的博客">
-<meta property="og:url" content="http://jvhuaxia.win/2017/11/19/sql-server-data-type-md/index.html">
+<meta property="og:url" content="http://jvhuaxia.win/2017/11/20/sql-server-data-type-md/index.html">
 <meta property="og:site_name" content="菊花侠的博客">
-<meta property="og:description" content="====文本数据类型==== char 固定长度的非Unicode字符 varchar 可变长度的非Unicode字符 nchar 固定长度的Unicode支付 nvarchar 可变长度的Unicode支付 text 储存长文本信息 ntext 储存可变长度的文本信息====日期和时间==== datetime 储存时间和日期====数字数据====整数 int smallint tinyint">
+<meta property="og:description" content="文本数据类型 char 固定长度的非Unicode字符 varchar 可变长度的非Unicode字符 nchar 固定长度的Unicode支付 nvarchar 可变长度的Unicode支付 text 储存长文本信息 ntext 储存可变长度的文本信息日期和时间 datetime 储存时间和日期数字数据整数 int smallint tinyint bigint小数 可以储存小数，并且可以指定数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-19T05:24:45.007Z">
+<meta property="og:updated_time" content="2017-11-19T23:08:27.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="菊花侠的博客">
-<meta name="twitter:description" content="====文本数据类型==== char 固定长度的非Unicode字符 varchar 可变长度的非Unicode字符 nchar 固定长度的Unicode支付 nvarchar 可变长度的Unicode支付 text 储存长文本信息 ntext 储存可变长度的文本信息====日期和时间==== datetime 储存时间和日期====数字数据====整数 int smallint tinyint">
+<meta name="twitter:description" content="文本数据类型 char 固定长度的非Unicode字符 varchar 可变长度的非Unicode字符 nchar 固定长度的Unicode支付 nvarchar 可变长度的Unicode支付 text 储存长文本信息 ntext 储存可变长度的文本信息日期和时间 datetime 储存时间和日期数字数据整数 int smallint tinyint bigint小数 可以储存小数，并且可以指定数">
   
     <link rel="alternate" href="/atom.xml" title="菊花侠的博客" type="application/atom+xml">
   
@@ -66,8 +66,8 @@
       <div class="outer">
         <section id="main"><article id="post-sql-server-data-type-md" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/19/sql-server-data-type-md/" class="article-date">
-  <time datetime="2017-11-19T05:24:27.963Z" itemprop="datePublished">2017-11-19</time>
+    <a href="/2017/11/20/sql-server-data-type-md/" class="article-date">
+  <time datetime="2017-11-19T23:08:27.221Z" itemprop="datePublished">2017-11-20</time>
 </a>
     
   </div>
@@ -76,25 +76,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="文本数据类型"><a href="#文本数据类型" class="headerlink" title="====文本数据类型===="></a>====文本数据类型====</h1><ul>
+        <h1 id="文本数据类型"><a href="#文本数据类型" class="headerlink" title="文本数据类型"></a>文本数据类型</h1><ul>
 <li>char 固定长度的非Unicode字符</li>
 <li>varchar 可变长度的非Unicode字符</li>
 <li>nchar 固定长度的Unicode支付</li>
 <li>nvarchar 可变长度的Unicode支付</li>
 <li>text 储存长文本信息</li>
-<li>ntext 储存可变长度的文本信息<h1 id="日期和时间"><a href="#日期和时间" class="headerlink" title="====日期和时间===="></a>====日期和时间====</h1></li>
-<li>datetime 储存时间和日期<h1 id="数字数据"><a href="#数字数据" class="headerlink" title="====数字数据===="></a>====数字数据====</h1><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3></li>
+<li>ntext 储存可变长度的文本信息<h1 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h1></li>
+<li>datetime 储存时间和日期<h1 id="数字数据"><a href="#数字数据" class="headerlink" title="数字数据"></a>数字数据</h1><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3></li>
 <li>int smallint tinyint bigint<h3 id="小数-可以储存小数，并且可以指定数据总宽度和小数位数"><a href="#小数-可以储存小数，并且可以指定数据总宽度和小数位数" class="headerlink" title="小数 可以储存小数，并且可以指定数据总宽度和小数位数"></a>小数 可以储存小数，并且可以指定数据总宽度和小数位数</h3></li>
-<li>float decimal<h1 id="货比数据类型"><a href="#货比数据类型" class="headerlink" title="====货比数据类型===="></a>====货比数据类型====</h1></li>
-<li>money 可以用来存放货比类型<h1 id="Bit数据类型"><a href="#Bit数据类型" class="headerlink" title="====Bit数据类型===="></a>====Bit数据类型====</h1></li>
-<li>bit 储存布尔数据类型 True/False<h1 id="二进制数据类型"><a href="#二进制数据类型" class="headerlink" title="====二进制数据类型===="></a>====二进制数据类型====</h1></li>
+<li>float decimal<h1 id="货比数据类型"><a href="#货比数据类型" class="headerlink" title="货比数据类型"></a>货比数据类型</h1></li>
+<li>money 可以用来存放货比类型<h1 id="Bit数据类型"><a href="#Bit数据类型" class="headerlink" title="Bit数据类型"></a>Bit数据类型</h1></li>
+<li>bit 储存布尔数据类型 True/False<h1 id="二进制数据类型"><a href="#二进制数据类型" class="headerlink" title="二进制数据类型"></a>二进制数据类型</h1></li>
 <li>image 可以用来储存图像</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jvhuaxia.win/2017/11/19/sql-server-data-type-md/" data-id="cja6bj5lr0000dosv9icfgo12" class="article-share-link">Share</a>
+      <a data-url="http://jvhuaxia.win/2017/11/20/sql-server-data-type-md/" data-id="cja7dj9tl000038svsdxnfr3e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +133,7 @@
       <ul>
         
           <li>
-            <a href="/2017/11/19/sql-server-data-type-md/">(no title)</a>
+            <a href="/2017/11/20/sql-server-data-type-md/">(no title)</a>
           </li>
         
       </ul>
