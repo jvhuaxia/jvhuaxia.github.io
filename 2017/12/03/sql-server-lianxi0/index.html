@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017 | 菊花侠的博客</title>
+  <title>SQL Server 12月03号练习 | 菊花侠的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="菊花侠的博客">
-<meta property="og:url" content="http://jvhuaxia.win/archives/2017/index.html">
+  <meta name="description" content="CREATE TABLE student(    sid INT PRIMARY KEY IDENTITY(1,1),    sname NVARCHAR(20) NOT NULL CHECK(LEN(sname)&amp;gt;1),    sex NVARCHAR(1) NOT NULL DEFAULT ‘男’,    class NVARCHAR(10) NULL,    city NVARCHAR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL Server 12月03号练习">
+<meta property="og:url" content="http://jvhuaxia.win/2017/12/03/sql-server-lianxi0/index.html">
 <meta property="og:site_name" content="菊花侠的博客">
+<meta property="og:description" content="CREATE TABLE student(    sid INT PRIMARY KEY IDENTITY(1,1),    sname NVARCHAR(20) NOT NULL CHECK(LEN(sname)&amp;gt;1),    sex NVARCHAR(1) NOT NULL DEFAULT ‘男’,    class NVARCHAR(10) NULL,    city NVARCHAR">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-03T10:35:22.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菊花侠的博客">
+<meta name="twitter:title" content="SQL Server 12月03号练习">
+<meta name="twitter:description" content="CREATE TABLE student(    sid INT PRIMARY KEY IDENTITY(1,1),    sname NVARCHAR(20) NOT NULL CHECK(LEN(sname)&amp;gt;1),    sex NVARCHAR(1) NOT NULL DEFAULT ‘男’,    class NVARCHAR(10) NULL,    city NVARCHAR">
   
     <link rel="alternate" href="/atom.xml" title="菊花侠的博客" type="application/atom+xml">
   
@@ -60,58 +64,69 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/03/sql-server-lianxi0/" class="archive-article-date">
-  <time datetime="2017-12-02T23:21:44.000Z" itemprop="datePublished">12月 3</time>
+        <section id="main"><article id="post-sql-server-lianxi0" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/03/sql-server-lianxi0/" class="article-date">
+  <time datetime="2017-12-02T23:21:44.000Z" itemprop="datePublished">2017-12-03</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SQL-Server/">SQL Server</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/sql-server-lianxi0/">SQL Server 12月03号练习</a>
+    <h1 class="article-title" itemprop="name">
+      SQL Server 12月03号练习
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/20/sql-server-data-type-md/" class="archive-article-date">
-  <time datetime="2017-11-19T23:21:44.000Z" itemprop="datePublished">11月 20</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/20/sql-server-data-type-md/">SQL Server数据类型</a>
-    </h1>
-  
+        <p>CREATE TABLE student(<br>    sid INT PRIMARY KEY IDENTITY(1,1),<br>    sname NVARCHAR(20) NOT NULL CHECK(LEN(sname)&gt;1),<br>    sex NVARCHAR(1) NOT NULL DEFAULT ‘男’,<br>    class NVARCHAR(10) NULL,<br>    city NVARCHAR(20) NULL,<br>    birth VARCHAR(30) NULL<br>)</p>
+<p>CREATE TABLE course(<br>    cid INT PRIMARY KEY IDENTITY(1,1),<br>    cname NVARCHAR(30) NOT NULL UNIQUE<br>)</p>
+<p>CREATE TABLE score(<br>    scid INT PRIMARY KEY IDENTITY(1,1),<br>    sid INT NOT NULL FOREIGN KEY REFERENCES student(sid),<br>    cid INT NOT NULL FOREIGN KEY REFERENCES course(cid),<br>    score decimal(5,1)<br>)</p>
+<ul>
+<li>CREATE TABLE 创建表的语法</li>
+<li>PRIMARY KEY 定义该字段为主键</li>
+<li>IDENTITY(1,1) 定义为标识列，初始值为1，递增值为1</li>
+<li>NULL/NOT NULL 定义该列是否可以为NULL，如果不写，则默认是NULL</li>
+<li>CHECK(LEN(sname)&gt;1) 定义约束，规定sname的值的长度必须大于1个字符</li>
+<li>DEFAULT 定义默认值 其后给出默认的值</li>
+<li>UNIQUE 定义唯一约束，规定该列的值不可发生重复</li>
+<li>FOREIGN KEY 定义该列为外键</li>
+<li>REFERENCES 定义该外键引用了某主键表的某主键列</li>
+</ul>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jvhuaxia.win/2017/12/03/sql-server-lianxi0/" data-id="cjaqmtmet0001sssvthdx1qyi" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/20/sql-server-data-type-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SQL Server数据类型</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
